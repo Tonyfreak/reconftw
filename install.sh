@@ -269,6 +269,7 @@ eval wget -N -c https://bootstrap.pypa.io/get-pip.py $DEBUG_STD && eval python3 
 eval rm -f get-pip.py $DEBUG_STD
 #eval ln -s /usr/local/bin/pip3 /usr/local/bin/pip3 $DEBUG_STD
 eval pip3 install -I -r requirements.txt $DEBUG_STD
+eval pip3 install s3scanner
 
 printf "${bblue} Running: Installing Golang tools (${#gotools[@]})${reset}\n\n"
 go env -w GO111MODULE=auto
