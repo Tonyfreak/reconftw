@@ -1185,8 +1185,11 @@ function nuclei_check(){
 			for i in "${!array[@]}"
 			do
 				crit=${array[i]}
-				printf "${yellow}\n Running : Nuclei $crit ${reset}\n\n"
-				cat .tmp/webs_subs.txt 2>/dev/null | nuclei $NUCLEI_FLAGS -severity $crit -nh -r $resolvers_trusted -rl $NUCLEI_RATELIMIT -o nuclei_output/${crit}.txt
+				if [ ! -f "nuclei_output/${crit}.txt" ]; then
+				 	printf "${yellow}\n Running : Nuclei $crit ${reset}\n\n"
+					cat .tmp/webs_subs.txt 2>/dev/null | nuclei $NUCLEI_FLAGS -severity $crit -nh -r $resolvers_trusted -rl $NUCLEI_RATELIMIT -o .tmp/${crit}.txt
+					mv .tmp/${crit}.txt nuclei_output/
+				fi
 			done
 			printf "\n\n"
 		else
@@ -1196,8 +1199,11 @@ function nuclei_check(){
 				for i in "${!array[@]}"
 				do
 					crit=${array[i]}
-					printf "${yellow}\n Running : Nuclei $crit ${reset}\n\n"
-					axiom-scan .tmp/webs_subs.txt -m nuclei -severity ${crit} -nh -rl $NUCLEI_RATELIMIT -o nuclei_output/${crit}.txt $AXIOM_EXTRA_ARGS 2>>"$LOGFILE" &>/dev/null
+					if [ ! -f "nuclei_output/${crit}.txt" ]; then
+						printf "${yellow}\n Running : Nuclei $crit ${reset}\n\n"
+						axiom-scan .tmp/webs_subs.txt -m nuclei -severity ${crit} -nh -rl $NUCLEI_RATELIMIT -o .tmp/${crit}.txt $AXIOM_EXTRA_ARGS 2>>"$LOGFILE" &>/dev/null
+						mv .tmp/${crit}.txt nuclei_output/
+					fi
 				done
 				printf "\n\n"
 			fi
