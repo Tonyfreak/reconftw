@@ -1,0 +1,49 @@
+apikeys:
+  bevigil:
+   key: agzb0UQD3eb8ZzUX
+
+  binaryedge:
+    key: fxIDLBxGZW9lhqG4tU57waSUuNwznNMHadbxEev3
+
+  bing:
+    key:
+
+  bufferoverun:
+    key: fxIDLBxGZW9lhqG4tU57waSUuNwznNMHadbxEev3
+
+  censys:
+    id: 3f1714da-49b9-4d25-86d5-0636276fb03f
+    secret: 8AoAKfUbyVO9rOTStCagjWZqh6RkwMoc
+
+  fullhunt:
+    key: 3c62c41d-c8dc-4c65-a2f0-4891900da5be
+
+  github:
+    key: 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
+
+  hunter:
+    key: 71927f4551ea2e5d727bec2f8da4293cdb3e385c
+
+  intelx:
+    key: fb2db215-e0e3-48b8-8f1c-8edc5b40dcc2
+
+  pentestTools:
+    key:
+
+  projectDiscovery:
+    key: zMTrFY7LrYBsR6FqTcLltJ0tkg1xiXcjAGWYlYhwVA2avqUDDhqx34HcSpTIEM1a
+
+  rocketreach:
+    key:
+
+  securityTrails:
+    key: jLuOkrWSNwbAFIHDnp72MDA4f2cOcCTM
+
+  shodan:
+    key: nhDVWfCNH0II0qMuTa21uU4PnKTZfBkw
+
+  virustotal:
+    key: 1482d7dd71f2f549c74fa5985eacc6946496bec9434177f5ef496afa406a8bb5
+
+  zoomeye:
+    key: 632B0b31-5d63-b584e-7aa2-dd279ee9757
